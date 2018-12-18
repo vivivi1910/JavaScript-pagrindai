@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Uzduotis 1</title>
+
+</head>
+<body>
+<input type="text" placeholder="iveskite skaiciu" id="input">
+<input type="submit" value="ar lyginis" onclick="handleClick()">
+<div id="output"></div>
+
+<script type="text/javascript" language="JavaScript">
+
+    function handleClick() {
+        var skaicius = document.getElementById("input").value;
+        if (skaicius % 2==0) {
+            document.getElementById("output").innerHTML = "lyginis";
+        }
+        else {
+            document.getElementById("output").innerHTML = "nelyginis";
+        }
+    }
+</script>
+
+
+
+</body>
+</html>

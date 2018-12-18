@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" placeholder="iveskite skaiciu" id="input">
+<input type="submit" value="ar lyginis" onclick="handleClick()">
+<div id="output"></div>
+<script>
+
+    // susikurti sumos kintamaji globalioje erdveje
+    // nuskaityti teksta is input lauko
+    // paziureti ar tekstas lygus nuluiu
+    // jei tekstas lygy=u 0 turima atsakyma spausdinti i div
+    // jei tekstas nelygu 0, ivesta teksta paversti is skaiciu ir prideti prie atsakymo
+    
+    var atsakymas = 0;
+
+    function handleClick() {
+        var zodis = document.getElementById("input").value;
+
+        // '5'+"3" => "53";
+        // Number("5") =>5;
+        if (zodis == "0") {
+            document.getElementById("output").innerHTML = atsakymas;
+        } else {
+            atsakymas += Number(zodis);
+        }
+    }
+</script>
+</body>
+</html>
+
